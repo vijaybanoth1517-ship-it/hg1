@@ -82,8 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
-                    <small class="password-help" style="color: #718096; font-size: 0.8rem; margin-top: 4px; display: block;">
-                        <strong>Recommended:</strong> Use at least 8 characters with uppercase, lowercase, numbers, and special characters for better security.
+                    <small class="password-help" style="color: #718096; font-size: 0.8rem; margin-top: 4px; display: block; line-height: 1.4;">
+                        <strong>Required:</strong> Minimum 8 characters, maximum 128 characters<br>
+                        Must include: 1 uppercase letter, 1 lowercase letter, 1 number, 1 special character (@$!%*?&)
                     </small>
                 </div>
                 
