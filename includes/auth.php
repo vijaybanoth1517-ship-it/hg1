@@ -74,6 +74,12 @@
      }
 +    
 +    private function validatePasswordStrength($password) {
+        // At least 8 characters, max 128, 1 uppercase, 1 lowercase, 1 number, 1 special character
+        if (strlen($password) < 8 || strlen($password) > 128) {
+            return false;
+        }
+        return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,128}$/', $password);
+    }
 +        // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
 +        return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/', $password);
 +    }
